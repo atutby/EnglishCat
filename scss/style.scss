@@ -35,7 +35,9 @@ a[target="_blank"] {
     }
 
     > .img {
-      width: 45%;
+			width: 45%;
+			position: sticky;
+			top: 0;
     }
   }
 }

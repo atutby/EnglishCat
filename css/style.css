@@ -44,6 +44,9 @@ a[target="_blank"]:after {
   }
   .item > div > .img {
     width: 45%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 }
 

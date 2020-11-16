@@ -9,6 +9,7 @@ item2s.forEach((item) => {
 	
 	titleItem = item.firstElementChild.innerText;
 
+
 	ulItem = item.firstElementChild.nextElementSibling.classList.add("crossing");
 	ulItem = item.firstElementChild.nextElementSibling.insertAdjacentHTML('afterbegin', '<li class="control">Развернуть/Свернуть</li>');
 	ulItem = item.firstElementChild.nextElementSibling.outerHTML;
