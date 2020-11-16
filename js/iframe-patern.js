@@ -1,27 +1,35 @@
-const item2 = document
-  .getElementsByClassName("item2")[0]
-	.firstElementChild.getAttribute("href");
-	
-const regexp = /\w{11}/;
-const idY = item2.match(regexp)
-console.log(idY[0]);
+let item2s = document.getElementsByClassName("item2");
+item2s = Array.from(item2s);
 
-const item2In = document.getElementsByClassName('item2')[0];
-item2In.innerHTML = `
+const regexp = /\w{11}/;
+let titleItem, ulItem;
+
+item2s.forEach((item) => {
+  idYoutube = item.firstElementChild.getAttribute("href").match(regexp)[0];
+	
+	titleItem = item.firstElementChild.innerText;
+
+	ulItem = item.firstElementChild.nextElementSibling.classList.add("crossing");
+	ulItem = item.firstElementChild.nextElementSibling.insertAdjacentHTML('afterbegin', '<li class="control">Развернуть/Свернуть</li>');
+	ulItem = item.firstElementChild.nextElementSibling.outerHTML;
+
+  item.innerHTML = `
 <div class="item">
-	<h2><a href="https://www.youtube.com/watch?v=${idY[0]}"></a></h2>
+	<h2><a href="https://www.youtube.com/watch?v=${idYoutube}">${titleItem}</a></h2>
 	<div>
 		<div class="img">
 			<div class="video12">
 				<iframe
-				src="https://www.youtube.com/embed/${idY[0]}"
+				src="https://www.youtube.com/embed/${idYoutube}"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen
 			></iframe>
 			</div>
 		</div>
-		<ol></ol>
+		${ulItem}
 	</div>
 </div>
-`
+`;
+});
+
