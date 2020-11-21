@@ -32,5 +32,6 @@ item2s.forEach((item) => {
 	</div>
 </div>
 `;
-});
-
+}); 
+// - the End cycle intem2s.forEach
+console.log(idYoutube + ' cat');
