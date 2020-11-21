@@ -20,7 +20,14 @@ a[target="_blank"] {
   font-size: 1.5rem;
 }
 
+h2 {
+  font-size: 1em;
+}
+
 @media (min-width: 767px) {
+  h2 {
+    font-size: 1.5em;
+  }
   .item > div {
     display: flex;
     flex-direction: row-reverse;
@@ -35,13 +42,12 @@ a[target="_blank"] {
     }
 
     > .img {
-			width: 45%;
-			position: sticky;
-			top: 0;
+      width: 45%;
+      position: sticky;
+      top: 0;
     }
   }
 }
-
 
 // Развернуть/Свернуть список ссылок на js?
 // https://jsfiddle.net/sasaha2015/me8y97u0/5/
@@ -58,7 +64,10 @@ a[target="_blank"] {
 
 .crossing li.control,
 .crossing li.control {
-	color: aqua;
+  color: aqua;
   display: list-item;
-	cursor: pointer;
+  cursor: pointer;
 }
+// the end
+
+

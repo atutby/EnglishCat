@@ -20,7 +20,14 @@ a[target="_blank"]:after {
   max-width: 100%;
 }
 
+h2 {
+  font-size: 1em;
+}
+
 @media (min-width: 767px) {
+  h2 {
+    font-size: 1.5em;
+  }
   .item > div {
     display: -webkit-box;
     display: -ms-flexbox;
