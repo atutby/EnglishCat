@@ -2,7 +2,7 @@ let item2s = document.getElementsByClassName("item2");
 item2s = Array.from(item2s);
 
 const regexp = /[\w-]{11}/;
-let titleItem, ulItem;
+let titleItem;
 
 item2s.forEach((item) => {
   idYoutube = item.firstElementChild.getAttribute("href").match(regexp)[0];
