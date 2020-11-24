@@ -10,11 +10,11 @@ item2s.forEach((item) => {
   titleItem = item.firstElementChild.innerText;
 
   let ul;
-  ul = item.firstElementChild.nextElementSibling.classList.add("crossing");
-  ul = item.firstElementChild.nextElementSibling.insertAdjacentHTML(
-    "afterbegin",
-    '<li class="control">Развернуть/Свернуть</li>'
-  );
+  // ul = item.firstElementChild.nextElementSibling.classList.add("crossing");
+  // ul = item.firstElementChild.nextElementSibling.insertAdjacentHTML(
+  //   "afterbegin",
+  //   '<li class="control">Развернуть/Свернуть</li>'
+  // );
   ul = item.firstElementChild.nextElementSibling.outerHTML;
 
   item.innerHTML = `
