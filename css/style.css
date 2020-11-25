@@ -12,11 +12,11 @@ a[target="_blank"]:after {
   width: 40px;
 }
 
-.item {
+.item2 {
   font-size: 1.5rem;
 }
 
-.item img {
+.item2 img {
   max-width: 100%;
 }
 
@@ -28,7 +28,7 @@ h2 {
   h2 {
     font-size: 1.5em;
   }
-  .item > div {
+  .item2 > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -44,12 +44,12 @@ h2 {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .item > div ol,
-  .item > div ul {
+  .item2 > div ol,
+  .item2 > div ul {
     font-size: 2rem;
     width: 45%;
   }
-  .item > div > .img {
+  .item2 > div > .img {
     width: 45%;
     position: -webkit-sticky;
     position: sticky;
@@ -57,13 +57,13 @@ h2 {
   }
 }
 
-.crossing li:nth-child(n + 5),
-.crossing li:nth-child(n + 5) {
+.crossing li:nth-child(n + 6),
+.crossing li:nth-child(n + 6) {
   display: none;
 }
 
-.crossing.expand li:nth-child(n + 5),
-.crossing.expand li:nth-child(n + 5) {
+.crossing.expand li:nth-child(n + 6),
+.crossing.expand li:nth-child(n + 6) {
   display: list-item;
 }
 

@@ -10,12 +10,33 @@
     <title>index3.html</title>
   </head>
   <body>
+
+		<div id="id">
+			<u>
+				<li>01</li>
+				<li>02</li>
+				<li>03</li>
+			</u>
+		</div>
+		<script>
+			let id = document.getElementById('id');
+			
+		</script>
+
+		
     <div class="item2">
+		<style>
+			#thanksgiving li {
+				font: italic bold 1em/1.5 monospace;
+			}
+		</style>
+			
       <a href="https://www.youtube.com/watch?v=zJ9wXuYH1ug">
         English Vocabulary Lesson: THANKSGIVING! All the English you need to
         celebrate!
-      </a>
-      <ul>
+			</a>
+
+      <ul id="thanksgiving">
           <li>Lincoln</li>
           <li>autumn, harvest</li>
           <li>feast</li>
@@ -129,8 +150,8 @@
       </ul>
     </div>
 
-    <script src="./js/common.js"></script>
-
+		
     <script src="./js/iframe-patern.js"></script>
+    <script src="./js/common.js"></script>
   </body>
 </html>
