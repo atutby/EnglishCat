@@ -10,16 +10,50 @@
     <title>index3.html</title>
   </head>
   <body>
-    <div id="id">
-      <u>
-        <li>01</li>
-        <li>02</li>
-        <li>03</li>
-      </u>
+    <div id="outer" style="border: 3px solid black;">
+      <div id="id" style="border: 3px solid red;">
+				<!-- // комментарий1 -->
+        <u>
+					<li>01</li> 
+					<!-- // комментарий2 -->
+          <li>02</li>
+          <li>03</li>
+				</u>
+				<!-- // комментарий3 -->
+				<strong>Cat</strong>
+				<span>Dog</span><strong>Cat</strong>
+				<p>lorem</p>
+      </div>
     </div>
+
     <script>
       let id = document.getElementById("id");
-    </script>
+      console.log(id.childNodes);
+			console.log(id.children);
+      console.log(id.outerHTML);
+
+      console.log(id.parentElement);
+
+			// for (node of id.childNodes)
+			// {
+			// 	console.log(node);
+			// }
+		</script>
+		
+		<div class="item2">
+			<a href="https://www.youtube.com/watch?v=O8cy21WJXhg&list=PL2SKo1EIjaRyr_oOk09iGo4gNxfQpmbIj&index=36">	«Газетная лексика» - Dire - Катастрофический</a>
+      <ul>
+        <li>Welcome to the Voice of America's News Words.</li>
+        <li>The United Nations Refugee Agency reports there are now more than 68 million refugees around the world.</li>
+        <li>DIRE</li>
+        <li>Chris Boian is with the UN.</li>
+        <li>He says the international refugee situation is dire.</li>
+        <li>There's a person forcibly displaced now every two seconds. These are people that are fleeing not by choice but because they have no choice but to flee if they want to stay alive.</li>
+        <li>A situation that is dire requires immediate action because it is serious or extreme and difficult to solve.</li>
+        <li>A dire warning signals a very bad future that can cause worry or great fear.</li>
+      </ul>
+			
+		</div>
 
     <div class="item2">
       <a
@@ -38,8 +72,9 @@
           countries. That figure is estimated to grow to $485 billion this year.
         </li>
         <li>
-          Remittances are a lifeline to many countries that are facing some sort of a crisis. The poorer the country, the larger their dependence
-          on remittances.
+          Remittances are a lifeline to many countries that are facing some sort
+          of a crisis. The poorer the country, the larger their dependence on
+          remittances.
         </li>
         <li>
           A remittance is money sent, usually by mail, as a payment or as a
