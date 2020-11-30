@@ -10,7 +10,9 @@
     <title>index3.html</title>
   </head>
   <body>
-    <div id="outer" style="border: 3px solid black;">
+
+
+    <div id="outer" name="outer" style="border: 3px solid black; display: block;">
       <div id="id" style="border: 3px solid red;">
 				<!-- // комментарий1 -->
         <u>
@@ -24,21 +26,23 @@
 				<span>Dog</span><strong>Cat</strong>
 				<p>lorem</p>
       </div>
-    </div>
+		</div>
+		<button onclick="none()">display:none</button>
+		<button onclick="block()">display:block</button>
+		<script>
+      let outer = document.getElementsByName('outer')[0];
 
-    <script>
-      let id = document.getElementById("id");
-      console.log(id.childNodes);
-			console.log(id.children);
-      console.log(id.outerHTML);
+			function none() {
+				outer.style.display = 'none'
+			}
 
-      console.log(id.parentElement);
-
-			// for (node of id.childNodes)
-			// {
-			// 	console.log(node);
-			// }
+			function block() {
+				outer.style.display = 'block'
+			}
 		</script>
+
+
+
 
     <div class="item2">
 			<a href="https://www.youtube.com/watch?v=w1p-rYJL4bA&list=PL2SKo1EIjaRyr_oOk09iGo4gNxfQpmbIj&index=38">«Газетная лексика» - Vulnerable - Уязвимый</a>
