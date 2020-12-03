@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      Width: <input type="number" id="width" value="3200" /> Height:
+      <input type="number" id="height" value="200" />
+    </div>
+    <div>
+      <input type="file" id="file" />
+      <input type="button" value="Show" onclick="processFile()" />
+    </div>
+    <div style="width: 420px; height: 220px; overflow: auto;">
+      <canvas id="canvas" width="400" height="200"></canvas>
+    </div>
+    <a href="#" onclick="downloadImage()">Download Image</a>
+
+    <script>
+      function processFile() {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          let buffer = e.target.result;
+          let ctx = new AudioContext();
+          ctx.decodeAudioData(buffer).then(function (audioBuffer) {
+            // здесь массив Float32
+            // для примера рисуем только первый канал
+            let channel = audioBuffer.getChannelData(0);
+            var allMin = 0;
+            var allMax = 0;
+            for (var i = 0; i < channel.length; i++) {
+              allMin = channel[i] < allMin ? channel[i] : allMin;
+              allMax = channel[i] > allMax ? channel[i] : allMax;
+            }
+            let allAvg = (allMin + allMax) / 2;
+            let width = parseInt(document.querySelector("#width").value);
+            let height = parseInt(document.querySelector("#height").value);
+            let canvas = document.querySelector("#canvas");
+            canvas.width = width;
+            canvas.height = height;
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#CCCCCC";
+            ctx.fillRect(0, 0, width, height);
+            for (var i = 0; i < width; i++) {
+              var min = 0;
+              var max = 0;
+              let sampleFrom = Math.floor((channel.length * i) / width);
+              let sampleTo = Math.floor((channel.length * (i + 1)) / width);
+              var rms = 0;
+              // считаем минимум и максимум на участке + среднее квадратичное
+              for (var j = sampleFrom; j < sampleTo; j++) {
+                min = channel[j] < min ? channel[j] : min;
+                max = channel[j] > max ? channel[j] : max;
+                rms += (channel[j] * channel[j]) / (sampleTo - sampleFrom);
+              }
+
+              var fromY = Math.floor(
+                (height * (allMax - min)) / (allMax - allMin)
+              );
+              var toY = Math.floor(
+                (height * (allMax - max)) / (allMax - allMin)
+              );
+              ctx.fillStyle = "#414BD3";
+              ctx.fillRect(i, fromY, 1, toY - fromY);
+
+              rms = Math.sqrt(rms);
+              var fromY = Math.floor(
+                height / 2 + (height * (allAvg - rms)) / (allMax - allMin)
+              );
+              var toY = Math.floor(
+                height / 2 + (height * (allAvg + rms)) / (allMax - allMin)
+              );
+              ctx.fillStyle = "#777CE3";
+              ctx.fillRect(i, fromY, 1, toY - fromY);
+            }
+          });
+        };
+        reader.readAsArrayBuffer(document.querySelector("#file").files[0]);
+      }
+
+      function downloadImage() {
+        let image = document
+          .querySelector("#canvas")
+          .toDataURL("image/png")
+          .replace("image/png", "image/octet-stream");
+        let a = document.querySelector("a");
+        a.setAttribute("download", "image.png");
+        a.setAttribute("href", image);
+      }
+    </script>
+  </body>
+</html>

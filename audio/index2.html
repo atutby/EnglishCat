@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://wavesurfer-js.org">https://wavesurfer-js.org</a><br />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <div id="waveform"></div>
+
+    <div id="wave"></div>
+
+    <div class="controls">
+      <button class="btn btn-primary" data-action="play-region-1">
+        <i class="glyphicon glyphicon-play"></i>
+        Play Region 1
+      </button>
+
+      <button class="btn btn-primary" data-action="play-region-2">
+        <i class="glyphicon glyphicon-play"></i>
+        Loop Region 2
+      </button>
+
+      <button class="btn btn-primary" data-action="pause">
+        <i class="glyphicon glyphicon-pause"></i>
+        Pause
+      </button>
+    </div>
+
+    <script>
+      var wavesurfer = WaveSurfer.create({
+        container: document.querySelector("#waveform"),
+        waveColor: "#A8DBA8",
+        progressColor: "#3B8686",
+        backend: "MediaElement",
+        plugins: [
+          WaveSurfer.regions.create({
+            regionsMinLength: 2,
+            regions: [
+              {
+                start: 1,
+                end: 3,
+                loop: false,
+                color: "hsla(400, 100%, 30%, 0.5)",
+              },
+              {
+                start: 5,
+                end: 7,
+                loop: false,
+                color: "hsla(200, 50%, 70%, 0.4)",
+                minLength: 1,
+              },
+            ],
+            dragSelection: {
+              slop: 5,
+            },
+          }),
+        ],
+      });
+
+		</script>
+		
+  </body>
+</html>
