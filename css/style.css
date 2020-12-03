@@ -3,13 +3,12 @@ body {
   word-wrap: break-word;
 }
 
-a[target="_blank"] {
+.item2 a[target="_blank"] {
   background-color: #ffff99;
 }
 
-a[target="_blank"]:after {
+.item2 a[target="_blank"]:after {
   content: url(/EnglishCat/images/target3.png);
-  width: 40px;
 }
 
 .item2 {
