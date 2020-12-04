@@ -6,27 +6,30 @@ const regexp = /[\w-]{11}/;
 let titleItem, idYoutube, href;
 
 item2s.forEach((item) => {
-	// защита от пустого div.item2
-	if (!item.getElementsByTagName("a")[0]) return;	
-	
-	href = item.getElementsByTagName("a")[0].getAttribute("href");
+  // защита от пустого div.item2
+  if (!item.getElementsByTagName("a")[0]) return;
 
-	if(!href) return; // защцита от пустой ссылки
-	idYoutube = href.match(regexp)[0];
-	if(!idYoutube) return; // защита от не найденного idYoutube
+  href = item.getElementsByTagName("a")[0].getAttribute("href");
+
+  if (!href) return; // защцита от пустой ссылки
+  idYoutube = href.match(regexp)[0];
+  if (!idYoutube) return; // защита от не найденного idYoutube
 
   titleItem = item.getElementsByTagName("a")[0].innerText;
-	if (!titleItem) { titleItem = 'Simple' }
+  if (!titleItem) {
+    titleItem = "Simple";
+  }
   let ul = item.getElementsByTagName("ul")[0];
-	if (!ul) { // защита от пустого ul
-		ul = 'simple'
-	};
+  if (!ul) {
+    // защита от пустого ul
+    ul = "simple";
+  }
 
   // ul = item.firstElementChild.nextElementSibling.classList.add("crossing");
   // ul = item.firstElementChild.nextElementSibling.insertAdjacentHTML(
   //   "afterbegin",
   //   '<li class="control">Развернуть/Свернуть</li>'
-	// );
+  // );
 
   item.outerHTML = `
 			<div class="item2">
@@ -44,14 +47,15 @@ item2s.forEach((item) => {
 });
 // - the End cycle intem2s.forEach
 
-
 // Заменить картинкой видео и кнопкой PLAY
 function videoplay(button, id) {
   var par = button.parentNode;
   console.log(par);
   par.innerHTML = `
 				<iframe
-							src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&cc_load_policy=3"
+							src="https://www.youtube.com/embed/${id}"
+							autoplay="1"
+							cc_load_policy="3"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
