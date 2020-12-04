@@ -7,7 +7,15 @@ body {
   background-color: #ffff99;
 
   &:after {
-    content: url(/EnglishCat/images/target3.png);	
+		// content: url('/EnglishCat/images/target3.png');
+		background-image: url('/EnglishCat/images/target3.png');
+		background-size: 1em 1em;
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin-left: 0.2em;
+    width: 1em; 
+    height: 1em;
+    content:"";    
   }
 }
 
@@ -68,5 +76,3 @@ h2 {
   cursor: pointer;
 }
 // the end
-
-

@@ -6,7 +6,11 @@ const regexp = /[\w-]{11}/;
 let titleItem, idYoutube, href;
 
 item2s.forEach((item) => {
+	// защита от пустого div.item2
+	if (!item.getElementsByTagName("a")[0]) return;	
+	
 	href = item.getElementsByTagName("a")[0].getAttribute("href");
+
 	if(!href) return; // защцита от пустой ссылки
 	idYoutube = href.match(regexp)[0];
 	if(!idYoutube) return; // защита от не найденного idYoutube
@@ -47,7 +51,7 @@ function videoplay(button, id) {
   console.log(par);
   par.innerHTML = `
 				<iframe
-							src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0"
+							src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&cc_load_policy=3"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
