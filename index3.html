@@ -13,51 +13,53 @@
 </head>
 
 <body>
-	<div id="outer" name="outer" style="border: 3px solid black; display: none;">
-		<div id="id" style="border: 3px solid red;">
-			<!-- // комментарий1 -->
-			<u>
-				<li>01</li>
-				<!-- // комментарий2 -->
-				<li>02</li>
-				<li>03</li>
-			</u>
-			<!-- // комментарий3 -->
-			<strong>Cat</strong>
-			<span>Dog</span><strong>Cat</strong>
-			<p>lorem</p>
+
+
+	<div>
+		<div id="outer" name="outer">
+			<div id='gUMArea'>
+				<div>
+					Record:
+					<input type="radio" name="media" value="video" id='mediaVideo'>Video
+					<input type="radio" name="media" value="audio" checked>audio
+				</div>
+				<button class="btn btn-default" id='gUMbtn'>Request Stream</button>
+			</div>
+			<div id='btns'>
+				<button class="btn btn-default" id='start'>Start</button>
+				<button class="btn btn-default" id='stop'>Stop</button>
+			</div>
+			<div>
+				<ul class="list-unstyled" id='ul'></ul>
+			</div>
+			<script src="script.js"></script>
 		</div>
-	</div>
-	<button onclick="none()">display:none</button>
-	<button onclick="block()">display:block</button>
-	<script>
-		let outer = document.getElementsByName("outer")[0];
+		<button id="outer-button" onclick="none()">display:none</button>
+		<script>
+			let outer = document.getElementsByName("outer")[0];
 
-		function none() {
-			outer.style.display = "none";
-		}
-
-		function block() {
-			outer.style.display = "block";
-		}
-	</script>
-
-	<div class="item2">
-		<a href="https://www.youtube.com/watch?v=8_NPOVn5mSE&list=PL2SKo1EIjaRyr_oOk09iGo4gNxfQpmbIj&index=43">«Английский
-			за минуту» - Zone Out - Отключиться</a>
-		<ul>
-			<li>Welcome to English in a Minute!</li>
-			<li>A zone is any area set apart from another area.</li>
-			<li>Zone Out.</li>
-			<li>Let's hear what Anna and Jonathan have to say about this one.</li>
-			<li>So like I was saying, I sent her. Jonathan. Jonathan! What are you doing?</li>
-			<li>Oh, sorry Anna.I guess I zoned out for a second there. I was thinking about all the trout I hope to catch on
-				our fishing trip.</li>
-			<li>Well, stop! We have a three-hour drive to the lake. And I have a lot of stuff to you talk about.</li>
-			<li>To zone out means that you are not concentrating. Your mind starts to think about other things rather than
-				what you are doing or you daydream like Jonathan. He zoned out thinking about all the fish he wants to catch on
-				his fishing trip with Anna. And that's English in a Minute!</li>
-		</ul>
+			function none() {
+				outer.classList.toggle("none");
+			}
+		</script>
+		<div class="item2">
+			<a href="https://www.youtube.com/watch?v=8_NPOVn5mSE&list=PL2SKo1EIjaRyr_oOk09iGo4gNxfQpmbIj&index=43">«Английский
+				за минуту» - Zone Out - Отключиться</a>
+			<ul>
+				<li>Welcome to English in a Minute!</li>
+				<li>A zone is any area set apart from another area.</li>
+				<li>Zone Out.</li>
+				<li>Let's hear what Anna and Jonathan have to say about this one.</li>
+				<li>So like I was saying, I sent her. Jonathan. Jonathan! What are you doing?</li>
+				<li>Oh, sorry Anna.I guess I zoned out for a second there. I was thinking about all the trout I hope to catch on
+					our fishing trip.</li>
+				<li>Well, stop! We have a three-hour drive to the lake. And I have a lot of stuff to you talk about.</li>
+				<li>To zone out means that you are not concentrating. Your mind starts to think about other things rather than
+					what you are doing or you daydream like Jonathan. He zoned out thinking about all the fish he wants to catch
+					on
+					his fishing trip with Anna. And that's English in a Minute!</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="item2">
