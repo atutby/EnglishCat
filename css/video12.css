@@ -1,7 +1,8 @@
 .video12 {
   position: relative;
   /* margin-bottom: 110px; */
-  padding-bottom: 75%;
+	padding-bottom: 75%;
+  cursor: pointer;
 }
 
 /* .video12_pb-50 {

@@ -36,8 +36,8 @@ item2s.forEach((item) => {
 				<h2><a href="${href}">${titleItem}</a></h2>
 				<div>
 					<div class="img">
-						<div class="video12" style="background: url(//i.ytimg.com/vi/${idYoutube}/hqdefault.jpg)  0% 0% / cover;">
-								<div class="video1-play" onclick="videoplay(this, '${idYoutube}');"></div>
+						<div class="video12" onclick="videoplay(this, '${idYoutube}');" style="background: url(//i.ytimg.com/vi/${idYoutube}/hqdefault.jpg)  0% 0% / cover;">
+								<div class="video1-play"></div>
 						</div>
 					</div>
 					${ul.outerHTML}
@@ -47,13 +47,20 @@ item2s.forEach((item) => {
 });
 // - the End cycle intem2s.forEach
 
+
+let isTrue = true;
+let cat;
+if (isTrue) {
+	cat = '&controls=0';
+} else {
+	cat = '';
+}
+
 // Заменить картинкой видео и кнопкой PLAY
 function videoplay(button, id) {
-  var par = button.parentNode;
-  console.log(par);
-  par.innerHTML = `
+  button.innerHTML = `
 				<iframe
-							src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0"
+							src="https://www.youtube.com/embed/${id}?autoplay=1${cat}"
 							cc_load_policy="3"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
