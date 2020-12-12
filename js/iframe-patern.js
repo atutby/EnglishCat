@@ -53,8 +53,8 @@ function videoplay(button, id) {
   console.log(par);
   par.innerHTML = `
 				<iframe
-							src="https://www.youtube.com/embed/${id}?rel=0&autoplay=1"
-							cc_load_policy="3" 
+							src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0"
+							cc_load_policy="3"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen

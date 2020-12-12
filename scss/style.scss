@@ -28,11 +28,21 @@ body {
 		max-width: 100%;
 	}
 
-	font-size: 1.5rem;
+	ul {
+		font-size: 1.2em;
+		line-height: 1.5;
+
+	}
 }
 
 h2 {
 	font-size: 1em;
+}
+
+ul {
+	width: 290px;
+	padding-inline-start: 0;
+	// margin-left: -10px;
 }
 
 @media (min-width: 767px) {
@@ -40,24 +50,24 @@ h2 {
 		font-size: 1.5em;
 	}
 
-	.item2>div {
+	.item2 > div {
 		display: flex;
-		flex-direction: row-reverse;
+		// flex-direction: row-reverse;
 		justify-content: space-around;
 		flex-wrap: wrap;
 		align-items: flex-start;
 
-		ol,
-		ul {
-			font-size: 2rem;
-			width: 45%;
-		}
+					ol,
+					ul {
+						// font-size: 2rem;
+						// width: 45%;
+					}
 
-		>.img {
-			width: 45%;
-			position: sticky;
-			top: 0;
-		}
+					>.img {
+						width: 45%;
+						position: sticky;
+						top: 0;
+					}
 	}
 }
 
