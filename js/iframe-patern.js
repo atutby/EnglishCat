@@ -47,7 +47,6 @@ item2s.forEach((item) => {
 });
 // - the End cycle intem2s.forEach
 
-
 let isTrue = true;
 let cat;
 if (isTrue) {
