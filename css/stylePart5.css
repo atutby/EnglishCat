@@ -20,10 +20,9 @@ ul {
 }
 
 /* --- END http://htmlbook.ru/faq/kak-ubrat-markery-v-markirovannom-spiske*/
-.itemPart5 :first-child {
-  width: 500px;
+.itmePart5 > div:nth-child(1) {
+  width: 320px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  right: 0;
 }
