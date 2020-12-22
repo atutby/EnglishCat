@@ -1,0 +1,30 @@
+*,
+html,
+body {
+	box-sizing: border-box;
+}
+
+/* http://htmlbook.ru/faq/kak-ubrat-markery-v-markirovannom-spiske */
+li {
+	list-style-type: none;
+	/* Убираем маркеры */
+}
+
+ul {
+	margin-left: 0;
+	/* Отступ слева в браузере IE и Opera */
+	padding-left: 0;
+	/* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+/* --- END http://htmlbook.ru/faq/kak-ubrat-markery-v-markirovannom-spiske*/
+
+
+.itemPart5 {
+	:first-child {
+		width: 500px;
+		position: sticky;
+		top: 0;
+		right: 0
+	}
+}
