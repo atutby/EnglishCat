@@ -8,7 +8,6 @@ body {
 
 /* http://htmlbook.ru/faq/kak-ubrat-markery-v-markirovannom-spiske */
 li {
-  list-style-type: none;
   /* Убираем маркеры */
 }
 
