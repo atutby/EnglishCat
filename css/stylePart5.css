@@ -30,7 +30,6 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  right: 0;
   background-color: teal;
   z-index: 2;
 }
@@ -38,7 +37,6 @@ ul {
 .wrap {
   max-width: 320px;
   margin: auto;
-  overflow: hidden;
 }
 
 .item5 {
