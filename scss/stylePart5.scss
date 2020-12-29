@@ -40,12 +40,21 @@ ul {
 // =======================================
 .wrap {
   max-width: 320px;
-  margin: auto;
+	margin: auto;
+	overflow: hidden;
 }
 
 // =======================================
 .item5 {
+	position: relative;
 	margin-bottom: 5em;
 	border: 1px solid black;
 	border-radius: 5px;
+}
+
+// ============================================
+
+.plus190 {
+	width: fit-content;
+	margin: 1em auto;
 }
