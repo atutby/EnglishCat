@@ -6,11 +6,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* http://htmlbook.ru/faq/kak-ubrat-markery-v-markirovannom-spiske */
-li {
-  // list-style-type: none;
-  /* Убираем маркеры */
-}
 
 ul {
   margin-left: 0;
@@ -26,9 +21,6 @@ ul {
     width: 320px;
     position: sticky;
     top: 0;
-  }
-
-  > div:nth-child(2) {
   }
 }
 
