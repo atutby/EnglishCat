@@ -52,3 +52,29 @@ ul {
   width: fit-content;
   margin: 1em auto;
 }
+
+.teeth {
+  color: red;
+}
+
+.imgRec {
+  padding: 50px;
+  cursor: pointer;
+  background-color: bisque;
+}
+
+.imgRec > img:first-child {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+}
+
+.imgRec > img:last-child {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 70px;
+  right: 80px;
+}
