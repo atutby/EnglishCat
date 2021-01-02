@@ -8,6 +8,10 @@ body {
   word-wrap: break-word;
 }
 
+img {
+  max-width: 200px;
+}
+
 .item2 a[target="_blank"] {
   background-color: #ffff99;
 }
