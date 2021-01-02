@@ -86,3 +86,15 @@ ul {
 	bottom: 70px;
 	right: 80px;
 }
+
+// ==================================
+.youtube {
+	width: 320px; 
+	height: 200px;
+}
+
+// Изображения для вставок youtube
+.youtube > img {
+	max-width: 100%;
+}
+

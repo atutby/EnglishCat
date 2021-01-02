@@ -14,9 +14,9 @@ Sorry this function not realised yet
 </div>
 `;
 
-for (key in audioBottom){
-	audioBottom[key].insertAdjacentHTML("beforebegin", imgRecText);
-}
+// for (key in audioBottom){
+	audioBottom[0].insertAdjacentHTML("beforebegin", imgRecText);
+// }
 
 // let imgRecs = document.getElementsByName('imgRec');
 
