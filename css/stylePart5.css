@@ -87,3 +87,18 @@ ul {
 .youtube > img {
   max-width: 100%;
 }
+
+nav figure {
+  display: inline-block;
+  width: 80px;
+  margin: 0;
+}
+
+nav figure img {
+  width: 100%;
+}
+
+nav::after {
+  content: '';
+  clear: both;
+}
