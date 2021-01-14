@@ -34,7 +34,8 @@ ul {
 
 .audio-bottom {
   position: sticky;
-  bottom: 0;
+	bottom: 0;
+	padding: 10px;
   background-color: teal;
   z-index: 2;
 }
