@@ -90,8 +90,9 @@ ul {
 }
 
 .youtube {
-  width: 320px;
-  height: 200px;
+  width: 645px;
+  height: 450px;
+  max-width: 100%;
 }
 
 .youtube > img {
@@ -120,11 +121,15 @@ nav::after {
 
 .simple p {
   margin: 0;
-  text-indent: .35in;
+  text-indent: 0.35in;
   line-height: 150%;
 }
 
 .simple .pre {
   white-space: pre-wrap;
   padding: 1em;
+}
+
+h5 {
+  margin: 0;
 }

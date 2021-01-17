@@ -2,12 +2,11 @@
 html,
 body {
   box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: x-large;
-	@media (min-width: 600px) {
-		font-size: xx-large;
-	}
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  @media (min-width: 600px) {
+    font-size: xx-large;
+  }
 }
 
 ul {
@@ -34,8 +33,8 @@ ul {
 
 .audio-bottom {
   position: sticky;
-	bottom: 0;
-	padding: 10px;
+  bottom: 0;
+  padding: 10px;
   background-color: teal;
   z-index: 2;
 }
@@ -94,8 +93,9 @@ ul {
 
 // ==================================
 .youtube {
-  width: 320px;
-  height: 200px;
+  width: 645px;
+	height: 450px;
+	max-width: 100%;
 }
 
 // Изображения для вставок youtube
@@ -123,14 +123,19 @@ nav::after {
   max-width: 900px;
   margin: 2em auto;
   p {
-		margin: 0;
-		text-indent: .35in;
+    margin: 0;
+    text-indent: 0.35in;
     line-height: 150%;
-	}
+  }
 
-	.pre {
-		white-space: pre-wrap;
-		// word-wrap: break-word;
-		padding: 1em;
-	}
+  .pre {
+    white-space: pre-wrap;
+    // word-wrap: break-word;
+    padding: 1em;
+  }
+}
+
+// =====================================
+h5 {
+	margin: 0;
 }
